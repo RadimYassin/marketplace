@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useEffect, useState } from "react";
+import { Provider } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import { client } from "./axios";
+import Navbar from "./Component/Navbar";
+import Market from "./Component/pages/Market"
+import PageError from "./Component/pages/PageError";
+import ShopingCart from "./Component/pages/ShopingCart"
+import { store } from "./redux/reducers/store";
 
 function App() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    try {
+      client.get().then((res) => setData(res.data.products))
+    } catch (error) {
+      console.log(error)
+    }
+  }, [])
+  console.log(data)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route index path="/" element={<Market data={data} />} />
+          <Route path="/shopingCart" element={<ShopingCart />} />
+          <Route path="/*" element={<PageError />} />
+        </Routes>
+      </div>
+
+
+    </Provider>
+
   );
 }
 
