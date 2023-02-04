@@ -13,6 +13,7 @@ import { store } from "./redux/reducers/store";
 function App() {
 
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
     try {
@@ -21,13 +22,16 @@ function App() {
       console.log(error)
     }
   }, [])
-  console.log(data)
+
   return (
     <Provider store={store}>
       <div className="App">
         <Navbar />
+      
+        
+    
         <Routes>
-          <Route index path="/" element={<Market data={data} />} />
+          <Route index path="/" element={<Market search={search} setSearch={setSearch}  setData={setData} data={data} />} />
           <Route index path="/aboute" element={<Aboute/>} />
           <Route path="/shopingCart" element={<ShopingCart />} />
           <Route path="/*" element={<PageError />} />
