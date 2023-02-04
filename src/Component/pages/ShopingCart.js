@@ -12,11 +12,11 @@ const ShopingCart = () => {
     <div>
       {cart.map(item=><div key={item.id}>
          <h2>{item.title}</h2>
-         <button onClick={e=>deletProdect({type:"Del_from_cart",payload:item.id})}>delete</button><br/><br/>
+         <button onClick={(e)=>deletProdect({type:"Del_from_cart",payload:item.id})}>delete</button><br/><br/>
           
-
+       
         <button onClick={e=>AddTotal({type:"ADD_PRICE",payload:item.price})}>+</button>
-         <input type="text" min={0} />
+       
          <button>-</button>
 
        
