@@ -1,13 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const ShopingCart = () => {
 
   const cart=useSelector((state)=>state.Cart)
-  
+  const deletProdect=useDispatch()
   return (
     <div>
-      {cart.map(item=><h2 key={item.id}>{item.title}</h2>)}
+      {cart.map(item=><div key={item.id}>
+         <h2>{item.title}</h2>
+         <button onClick={e=>deletProdect({type:"Del_from_cart",payload:item.id})}>delete</button>
+      </div>)}
+      
     </div>
   )
 }
