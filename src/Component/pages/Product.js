@@ -5,7 +5,6 @@ function Product({item}) {
     const cart=useSelector((state)=>state.Cart)
     const disbladBtn=cart.find(i=>i.id===item.id)
     const btn=disbladBtn ? true :false;
-    console.log(disbladBtn)
     const dis=useDispatch()
   return (
     <div  >
