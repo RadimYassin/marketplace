@@ -5,6 +5,8 @@ const ShopingCart = () => {
 
   const cart=useSelector((state)=>state.Cart)
   const deletProdect=useDispatch()
+
+  console.log(cart);
   return (
     <div>
       {cart.map(item=><div key={item.id}>
