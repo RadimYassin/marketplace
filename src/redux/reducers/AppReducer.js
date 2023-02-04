@@ -1,6 +1,6 @@
 let init={
     Cart:[],
-    totale:[]
+    totale:0
 }
 
 
