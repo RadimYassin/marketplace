@@ -11,7 +11,7 @@ function Product({item}) {
     <div  >
                       <h2>{item.title}</h2>
                       <p>{item.price}</p>
-                       <button disabled={btn}  onClick={()=>{dis({type:"ADD",payload:item});AddPrice({type:"ADD_PRICE",payload:item.price})}}>add to carte</button>
+                       <button disabled={btn}  onClick={()=>{dis({type:"ADD",payload:item});AddPrice({type:"ADD_PRICE",payload:{q:1,price:item.price,id:item.id}})}}>add to carte</button>
                   </div>
   )
 }

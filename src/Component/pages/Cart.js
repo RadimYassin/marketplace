@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-export default function Cart({item}) {
+export default function Cart({item,total}) {
     
-    const total=useSelector((state)=>state.total)
+
     const deletProdect=useDispatch()
     const deletPrice=useDispatch()
 
-let x=0
-for (let i = 0; i <total.length; i++) {
-     x += Number(total[i]);
-  
-}
+    const addq=useDispatch()
+    const delq=useDispatch()
 
 
-
-
+    for (let i = 0; i < total.length; i++) {
+        console.log(total[i].q);
+      
+    }
 
   return (
     <div>
@@ -26,18 +25,19 @@ for (let i = 0; i <total.length; i++) {
           deletPrice({type:"Del_PRICE",payload:item.price})
           }
           
-          }>delete</button><br/><br/>
+          }>delete</button>
           
        
-        <button  >+</button>
-       
-         <button>-</button>
+        <button onClick={()=>addq({type:"ADD_Q",payload:item.id})}  >+</button>
+         
+          
+         <button onClick={()=>delq({type:"DEL_Q",payload:item.id})} >-</button>
 
        
 
       </div>
    
-       {x}
+       
     </div>
   )
 }

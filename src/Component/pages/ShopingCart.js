@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import Cart from './Cart'
 const ShopingCart = () => {
-  const [t,setT]=useState(null)
+
   const cart=useSelector((state)=>state.Cart)
  
 ;
 
- 
+const total=useSelector((state)=>state.total)
+
 
   return (
     <div>
-      {cart.map(item=><Cart setT={setT} key={item.id} item={item}    />)}
+      {cart.map(item=><Cart total={total}  key={item.id} item={item}    />)}
       
-        <p>total :{t}</p>
+        <p>total :</p>
   </div>)
 }
 
