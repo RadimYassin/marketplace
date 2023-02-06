@@ -1,6 +1,6 @@
 let init={
     Cart:[],
-    totale:0
+    total:[]
 }
 
 
@@ -12,8 +12,9 @@ function AppReducer (state=init,{type,payload}){
             return {...state,Cart:state.Cart.filter((item)=>item.id!==payload)}
            
           case 'ADD_PRICE':
-            return {...state,totale:[]}
-           
+               return {...state,total:[...state.total,payload]}
+          case 'Del_PRICE':
+                return {...state,total:state.total.filter((item)=>item!==payload)}
         default: return state ;
            
     }

@@ -1,31 +1,20 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import Cart from './Cart'
 const ShopingCart = () => {
-
+  const [t,setT]=useState(null)
   const cart=useSelector((state)=>state.Cart)
-  const total=useSelector((state)=>state.totale)
-  const deletProdect=useDispatch()
-  const AddTotal=useDispatch()
-   console.log(total);
+ 
+;
+
+ 
+
   return (
     <div>
-      {cart.map(item=><div key={item.id}>
-         <h2>{item.title}</h2>
-         <button onClick={(e)=>deletProdect({type:"Del_from_cart",payload:item.id})}>delete</button><br/><br/>
-          
-       
-        <button onClick={e=>AddTotal({type:"ADD_PRICE",payload:item.price})}>+</button>
-       
-         <button>-</button>
-
-       
-
-      </div>)}
-      <p>total :</p>
+      {cart.map(item=><Cart setT={setT} key={item.id} item={item}    />)}
       
-    </div>
-  )
+        <p>total :{t}</p>
+  </div>)
 }
 
 export default ShopingCart
