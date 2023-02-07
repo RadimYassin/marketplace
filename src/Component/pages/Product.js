@@ -3,15 +3,15 @@ import { useDispatch,useSelector } from 'react-redux'
 
 function Product({item}) {
     const cart=useSelector((state)=>state.Cart)
-    const disbladBtn=cart.find(i=>i.id===item.id)
-    const btn=disbladBtn ? true :false;
+    const selectItem=cart.find(i=>i.id===item.id)
+    const disabled=selectItem ? true :false;
     const dis=useDispatch()
-    const AddPrice=useDispatch()
+   
   return (
     <div  >
                       <h2>{item.title}</h2>
                       <p>{item.price}</p>
-                       <button disabled={btn}  onClick={()=>{dis({type:"ADD",payload:item});AddPrice({type:"ADD_PRICE",payload:{q:1,price:item.price,id:item.id}})}}>add to carte</button>
+                       <button disabled={disabled}  onClick={()=>{dis({type:"ADD",payload:item});dis({type:"ADD_PRICE",payload:{q:1,price:item.price,id:item.id}})}}>add to carte</button>
                   </div>
   )
 }
