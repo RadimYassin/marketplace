@@ -97,3 +97,14 @@
     transition: all .3s ease-in-out;
   
  }
+
+ @media screen and (max-width:900px ) {
+    .img-product img{
+       
+        width:100%;
+      
+    
+        
+        
+    }
+ }
