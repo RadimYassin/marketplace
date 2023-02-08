@@ -1,0 +1,16 @@
+.Product-Container{
+  
+    margin-top: 3px;
+    height: 300px;
+    border-radius: 4px;
+    border: 1px solid black;
+   
+ }
+
+
+.Product-Container:hover{
+  
+ 
+   box-shadow: 0 0 10px;
+   transition: all 0.4s;
+}
