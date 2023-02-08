@@ -18,7 +18,7 @@ export default function Cart({item}) {
 
 useEffect(()=>{
   dispatch({type:"Create_PriceFinal",payload:{id:item.id,some:0}})
-},[item])
+},[])
 useEffect(()=>{
   dispatch({type:"Update_PriceFinal",payload:{id:item.id,q:q,price:item.price}})
 },[q])
