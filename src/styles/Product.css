@@ -78,8 +78,9 @@
 }
 .groupe-btn button:disabled{
    
-    background-color: rgb(83, 121, 197);
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
+    color: rgb(0, 0, 0);
    
   }
 
