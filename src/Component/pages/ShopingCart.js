@@ -12,16 +12,25 @@ const ShopingCart = () => {
 
 
   return (
-    <div className='cart-container'> 
-        <div className='cart-products'>
+<>
+{
+  cart.length ?   <div className='cart-container'> 
+  {
 
-            {cart.map(item=><Cart   key={item.id} item={item}    />)}
-
-        </div>
-        <TotalPrice/>
+  }
+  <div className='cart-products'>
       
-    
-  </div>)
+      {cart.map(item=><Cart   key={item.id} item={item}    />)}
+
+  </div>
+  <TotalPrice/>
+
+
+</div>        :     <p className='messgeCart'>cart is empty </p>
+}
+</>
+  
+   )
 }
 
 export default ShopingCart

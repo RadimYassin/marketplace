@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
+import {AiFillDelete} from 'react-icons/ai'
+
 export default function Cart({ item }) {
   
   const Listprice = useSelector((state) => state.Listprice)
@@ -17,15 +19,23 @@ export default function Cart({ item }) {
   }
 
   useEffect(()=>{
-    dispatch({type:'a',payload:item.id})
+    dispatch({type:'Calc_total_Prices',payload:item.id})
   },[q])
 
   return (
-
     
-    <section className='cart-container'>
-      <div className='cart-detail' key={item.id}>
-        <h2>{item.title}+++++{item.price}</h2>
+    
+    <div className='item'>
+      <div className='cart-detail' >
+        <div className='cart-product'>
+
+          <img src={item.images[0]} alt={item.title} />
+          <div className='product-title'>
+             <h2>{item.title}</h2>
+             <span> $ {item.price}</span>
+          </div>
+        </div>
+       
         <div className='Qty'>
 
           <button className='addQty' onClick={() => {dispatch({ type: "ADD_Q", payload: item.id});
@@ -40,13 +50,13 @@ export default function Cart({ item }) {
 
       </div>
 
-      <button className='delete' onClick={(e) => {
+      <AiFillDelete className='delete' onClick={(e) => {
         dispatch({ type: "Del_from_cart", payload: item.id });
         dispatch({ type: "Del_PRICE", payload: item.price })
-      }}>delete</button>
+      }}>delete</AiFillDelete>
 
 
-    </section>
+    </div>
 
 
 

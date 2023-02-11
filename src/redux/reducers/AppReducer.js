@@ -29,7 +29,7 @@ function AppReducer (state=init,{type,payload,Prices}){
                     }
                    return i
                   })}
-            case "a" :
+            case "Calc_total_Prices" :
                   return {...state,prices:state.Listprice.map((i)=>{
 
                     if (payload) {
@@ -37,6 +37,9 @@ function AppReducer (state=init,{type,payload,Prices}){
                     }
                     return i
                   })}
+                  case "Delete_All_CART" :
+                         return {...state,Listprice:[],prices:[],Cart:[]}
+           
          
         default: return state ;
            
