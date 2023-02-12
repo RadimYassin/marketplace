@@ -17,7 +17,7 @@ function Product({item}) {
                       <h3>{item.title}</h3>
                       <span>$ {item.price}</span>
                        <div className='groupe-btn'>
-                       <Link to={'/detail'}>detail</Link>
+                       <Link to={`/ProductDetail/${item.id}`}>detail</Link>
                        <button className='Add-item'
                         disabled={disabled} 
                         
