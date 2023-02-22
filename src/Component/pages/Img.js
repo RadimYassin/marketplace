@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-
+import React, {  useState } from 'react'
+import {AiOutlineLeft,AiOutlineRight} from "react-icons/ai"
 function Img({id,data}) {
 const [index,setIndex]=useState(1)
 
 console.log(data);
-const add=()=>{
+const addOne=()=>{
     if(id){
         setIndex(index+1)
     }
@@ -16,7 +16,7 @@ const add=()=>{
 
 }
 
-const ne=()=>{
+const lessOne=()=>{
     if (id) {
          setIndex(index-1)
     }
@@ -29,13 +29,13 @@ const ne=()=>{
  }
 console.log(index);
   return (
-    <div>
-        <button onClick={add}>-</button>
+    <div className='col1'>
+        <AiOutlineLeft onClick={lessOne}>-</AiOutlineLeft>
         {
           index  && <img src={`https://i.dummyjson.com/data/products/${id}/${index}.jpg`} alt="imge" /> 
         }
         
-        <button onClick={ne}>+</button>
+        <AiOutlineRight onClick={addOne}>+</AiOutlineRight>
         
     </div>
   )

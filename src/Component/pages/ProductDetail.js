@@ -4,7 +4,7 @@ import "./../../styles/ProductDetail.css";
 
 import { client } from '../../axios'
 import Img from './Img';
-import axios from 'axios';
+
 const ProductDetail = () => {
     const {id}=useParams()
   
@@ -20,10 +20,23 @@ const ProductDetail = () => {
         .finally(()=> setLoading(false))
     },[])
 
-
+console.log(data);
   return (
     <div className='container'>
           <Img id={id} data={data.images}/>
+          <div className='col2'>
+               <div className='info'>
+                  <h1>{data.title}</h1>
+                  <span> ${data.price}</span>
+               </div>
+
+              <div className='desc'>
+              <p> description :{data.description}</p>
+              </div>
+              <div className='btn'>
+                <button>add to cart</button>
+              </div>
+          </div>
     </div>
   )
 }
