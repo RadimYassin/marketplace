@@ -1,5 +1,5 @@
 .Product-Container{
-  
+   width: 300px;
     margin-top: 3px;
     height: auto;
     border-radius: 4px;
@@ -21,18 +21,22 @@
 
 
 .img-product{
-   
-     width: 100%;
-     height: 70%;
-    max-width: 100%;
+     width:100% ;
+   height: 80%;
+
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
 }
 
 .img-product img{
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
+    
+    width: 80%;
+    max-height: 100%;
+
     padding: 8px;
 
     
