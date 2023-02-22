@@ -3,29 +3,27 @@ import { useParams } from 'react-router-dom'
 import "./../../styles/ProductDetail.css";
 
 import { client } from '../../axios'
+import Img from './Img';
+import axios from 'axios';
 const ProductDetail = () => {
-
-  const [data,setData]=useState([])
     const {id}=useParams()
-    useEffect(()=>{
-
-         client.get(`/${id}`).then(res=>setData(res.data))
-
+  
+    const [loading,setLoading] = useState(false)
+    const [data,setData] = useState ([])
+    useEffect (() =>{
+        setLoading(true)
+        client.get("1")
+       .then(res => {
+          
+            setData(res.data)
+        })
+        .finally(()=> setLoading(false))
     },[])
+
 
   return (
     <div className='container'>
-         <div className='img'>
-                <button>-</button>
-                   <img src={data.images[1]} alt={data.title}/>
-                   <button>+</button>
-         </div>
-
-         <div className='info'>
-            <h1>{data.title}</h1>
-            <p>{data.price}</p>
-            
-         </div>
+          <Img id={id} data={data.images}/>
     </div>
   )
 }
