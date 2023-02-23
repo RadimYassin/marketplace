@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import { useSelector } from 'react-redux'
-import "./../../styles/ShopingCart.css";
-import Cart from './Cart'
-import TotalPrice from './TotalPrice';
+import Cart from '../Cart'
+import TotalPrice from '../TotalPrice';
+import "../../styles/ShopingCart.css";
 const ShopingCart = () => {
   const cart=useSelector((state)=>state.Cart)
  

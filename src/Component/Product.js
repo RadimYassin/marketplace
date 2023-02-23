@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
-import "./../../styles/Product.css";
+import "../styles/Product.css";
 function Product({item}) {
     const cart=useSelector((state)=>state.Cart)
     const selectItem=cart.find(i=>i.id===item.id)

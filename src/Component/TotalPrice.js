@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
-import "./../../styles/Total.css";
+import "./../styles/Total.css";
+import SpinnerB from './Sepinner';
+import BasicSepinner from './Sepinner';
 export default function TotalPrice() {
 
 
@@ -15,6 +18,8 @@ for (let i = 0; i < prices.length; i++) {
     <div className='total'>
       <p> total: {total} $</p>
       <button onClick={()=>dis({type:"Delete_All_CART"})}>delete All </button>
+      hhh:
+   
     </div>
   )
 }

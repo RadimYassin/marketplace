@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import "./../../styles/ProductDetail.css";
+import { useDispatch } from 'react-redux'
 
 import { client } from '../../axios'
-import Img from './Img';
+import Img from '../Img';
 
 const ProductDetail = () => {
     const {id}=useParams()

@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { client } from '../../axios'
-import Product from './Product'
+import Product from '../Product'
 import "./../../styles/Market.css";
 const Market = ({data ,search,setSearch,setData}) => {
 
