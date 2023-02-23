@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { client } from "./axios";
 import Navbar from "./Component/Navbar";
-import Aboute from "./Component/pages/Aboute";
+import About from "./Component/pages/About";
 import Market from "./Component/pages/Market"
 import PageError from "./Component/pages/PageError";
 import ProductDetail from "./Component/pages/ProductDetail";
@@ -33,7 +33,7 @@ function App() {
     
         <Routes>
           <Route index path="/" element={<Market search={search} setSearch={setSearch}  setData={setData} data={data} />} />
-          <Route path="/aboute" element={<Aboute/>} />
+          <Route path="/about" element={<About/>} />
           <Route path="/shopingCart" element={<ShopingCart />} />
           <Route path="/ProductDetail/:id" element={<ProductDetail/>} />
           <Route path="*" element={<PageError />} />
