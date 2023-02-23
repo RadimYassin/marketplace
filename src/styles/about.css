@@ -1,0 +1,56 @@
+.Container{
+
+    width: 65%;
+    margin: 4em auto;
+    padding: 2rem;
+    border: 1px solid rgb(134, 134, 134);
+}
+.Container h1{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.info{
+
+    padding: 1em;
+}
+
+p{
+    font-size: 1.2rem;
+    padding-top: .5em;
+}
+span{
+    font-size: 1rem;
+    padding-top: .2em;
+}
+
+.git{
+    margin-top: 1em;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+
+}
+svg{
+    font-size: 2rem;
+}
+
+.name{
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:900px ) {
+    .git{
+        width: 100%;
+        
+    
+    }
+   
+    
+    
+ 
+ }
