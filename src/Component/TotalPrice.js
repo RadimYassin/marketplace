@@ -18,7 +18,7 @@ for (let i = 0; i < prices.length; i++) {
     <div className='total'>
       <p> total: {total} $</p>
       <button onClick={()=>dis({type:"Delete_All_CART"})}>delete All </button>
-      hhh:
+    
    
     </div>
   )

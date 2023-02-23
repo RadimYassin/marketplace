@@ -1,5 +1,16 @@
 
+.containerS{
+    width: 70%;
+    height: 400PX;
+    margin: 100px auto;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 
+    
+}
 .container{
  width: 70%;
  
@@ -60,9 +71,17 @@ font-size: 1.5rem;
     color: rgb(66, 66, 66);
 }
 
-.col2 button{
+ .add{
+    width: 140px;
     padding: 7px;
     background-color: rgb(25, 143, 183);
+    color: white;
+    border-radius: 4px;
+}
+.del{
+    width: 140px;
+    padding: 7px;
+    background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 4px;
 }
