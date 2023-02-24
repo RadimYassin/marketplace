@@ -97,10 +97,11 @@ border-radius: 4px;
 }
 
 .delete{
-   height: 30px;
+  
+
   margin-right: 5px;
   color: rgb(225, 103, 103);
-  font-size: 30px;
+  font-size: 40px;
 }
 .delete:hover{
     

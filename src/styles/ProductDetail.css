@@ -14,7 +14,7 @@
 .container{
  width: 70%;
  
- margin: 100px auto;
+ margin: 2em auto;
 
  display: flex;
  justify-content: space-between;
@@ -31,7 +31,7 @@
     font-size: 30px;
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     gap: 10px;
     align-items: center;
 }
@@ -67,8 +67,8 @@ font-size: 1.5rem;
     font-size: 2rem;
 }
 .col1 span{
-    font-size: 1rem;
-    color: rgb(66, 66, 66);
+    font-size: 2rem;
+    color: rgb(149, 34, 34);
 }
 
  .add{
@@ -90,10 +90,25 @@ font-size: 1.5rem;
     .container{
         flex-direction: column;
     }
+    .col1 img{
+        width: 80%;
+      
+    }
     .col1 svg{
     font-size: 2rem;
         }
- 
+        .col2 h1{
+
+            font-size: 2rem;
+          }
+          .col1 p{
+              font-size: 1rem;
+          }
+          .col1 span{
+              font-size: .5rem;
+              color: rgb(66, 66, 66);
+          }
+          
  }
 
 
