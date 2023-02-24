@@ -5,6 +5,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+  
 
 
 
@@ -18,7 +19,7 @@ margin-top: 20px;
 width: 100%;  
 display: flex;
 align-items: center;
-gap: 16px;
+gap: 10px;
 flex-direction: row;
 border: 1px solid rgb(161, 161, 161);
 border-radius: 4px;
@@ -28,8 +29,8 @@ border-radius: 4px;
 }
 .cart-detail{
     display: flex;
-   
-    width: 100%;
+    
+    width: 85%;
    justify-content: space-between;
    align-items: center;
 }
@@ -71,6 +72,7 @@ border-radius: 4px;
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
+    
 }
 .addQty{
     background-color: rgb(25, 143, 183);
@@ -97,7 +99,8 @@ border-radius: 4px;
 }
 
 .delete{
-  
+  width: 10%;
+  text-align: center;
 
   margin-right: 5px;
   color: rgb(225, 103, 103);

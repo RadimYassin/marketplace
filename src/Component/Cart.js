@@ -49,11 +49,14 @@ export default function Cart({ item }) {
 
 
       </div>
-
-      <AiFillDelete className='delete' onClick={(e) => {
+       <div  className='delete'> 
+        <AiFillDelete  onClick={(e) => {
         dispatch({ type: "Del_from_cart", payload: item.id });
         dispatch({ type: "Del_PRICE", payload: item.price })
       }}/>
+
+       </div>
+     
 
 
     </div>
