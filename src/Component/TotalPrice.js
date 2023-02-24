@@ -17,7 +17,7 @@ for (let i = 0; i < prices.length; i++) {
   return (
     <div className='total'>
       <p> total: {total} $</p>
-      <button onClick={()=>dis({type:"Delete_All_CART"})}>delete All </button>
+      <button onClick={()=>dis({type:"Delete_All_CART"})}>confirmed </button>
     
    
     </div>
