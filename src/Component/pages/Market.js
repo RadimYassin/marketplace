@@ -18,17 +18,17 @@ const Market = ({data ,search,setSearch,setData}) => {
         <span>{data.length} Products</span>
         <input placeholder='search product' value={search} onChange={e=>setSearch(e.target.value)} type='text'/>
        </div>
-       <div className='Products-Container'>
+      
             {
-            data.length >0 ? data.map((item,index) => {
+            data.length >0 ? <div className='Products-Container'> {data.map((item,index) => {
 
 
-            return( <Product  key={index} item={item} />)})
+            return( <Product  key={index} item={item} />)})  }</div>
             :<div className='message'><p>No product found .</p></div>}
 
        </div>
      
-    </div>
+  
   )
 }
 

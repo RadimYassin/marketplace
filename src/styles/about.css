@@ -44,9 +44,13 @@ svg{
 }
 
 @media screen and (max-width:900px ) {
+    .Container{
+        margin-top:1em;
+        padding: 1em;
+    }
     .git{
         width: 100%;
-        
+    
     
     }
    
